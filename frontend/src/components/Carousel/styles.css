@@ -1,0 +1,102 @@
+.carousel-container {
+    width: 100%;
+    max-width: 1120px;
+    height: 220px;
+    margin: auto;
+    margin-top: 2.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.carousel-container h2 {
+    /*color: #321911;*/
+    color: #ffffff;
+}
+
+.carousel-container .slider-container {
+    width: 100%;
+    max-width: 1120px;
+    height: 250px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+
+.carousel-container .slider-container .slider {
+    width: 100%;
+    height: 225px;
+    overflow: hidden;
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.carousel-container .slider-container .slider .slide {
+    min-width: 100%;
+    height: 200px;
+    overflow: hidden;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.5s
+}
+
+.carousel-container .slider-container .slider .slide .cell {
+    width: 12%;
+    height: 100%;
+    background-color: #fbc02d;
+    margin: 0 2px;
+    flex: 1;
+    border-radius: 5px;
+    transition: transform 300ms ease 100ms;
+    cursor: pointer;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.carousel-container .slider-container .slider:hover .slide .cell {
+    transform: translateX(-25%);
+}
+
+
+.carousel-container .slider-container .slider .slide .cell:hover ~ .cell {
+    transform: translateX(25%);
+}
+
+.carousel-container .slider-container .slider .slide .cell:hover {
+    transform: scale(1.25) !important;
+}
+
+.carousel-container .slider-container button {
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    height: 70%;
+}
+
+.carousel-container .slider-container button#left {
+    left: -3%;
+    background: none;
+    border: none;
+    position: absolute;
+}
+
+.carousel-container .slider-container button#right {
+    right: -3%;
+    background: none;
+    border: none;
+    position: absolute;
+}
